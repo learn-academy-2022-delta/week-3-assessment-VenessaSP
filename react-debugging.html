@@ -63,8 +63,9 @@
           // No need to change anything ABOVE this line ^
 
           return(
+            <>
             <h1>Draw a Card</h1>
-            <button onClick={}>
+            <button onClick={drawCard}>
               Click to Draw a Card
             </button>
             <button onClick={shuffle}>
@@ -79,6 +80,7 @@
                 )
               })}
             </div>
+            </>
           )
         }
       }
@@ -89,3 +91,19 @@
     </script>
   </body>
 </html>
+
+
+
+
+<!------------ First mistake I found: 
+   Were the opening and closing tags, figured since the whole scope was red there must be something missing from the top, and realized it wasn't encapsulated.
+
+   ------------ Second mistake I found line: 67
+  Even though the red cleared up I still got an error message: 
+  'Inline Babel script:49 Uncaught ReferenceError: drawCard is not defined'
+Don't understand because there's a function that was made and it matches the onClick on line 71 and no error was throw'n for that.
+
+---------------- Third mistake honestly couldn't find
+I was thinking the closing tag </>
+
+
